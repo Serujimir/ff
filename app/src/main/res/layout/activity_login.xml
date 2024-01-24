@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/tvHi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/sf_pro_heavy"
+        android:text="✋ Добро пожаловать!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:text="Войдите, чтобы пользоваться функциями приложения"
+        app:layout_constraintEnd_toEndOf="@+id/tvHi"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvHi"
+        app:layout_constraintTop_toBottomOf="@+id/tvHi" />
+
+    <TextView
+        android:id="@+id/tvHintEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:text="Вход по E-mail"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/tvHint" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:backgroundTintMode="multiply"
+        app:cardBackgroundColor="#F5F5F9"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHintEmail">
+
+        <EditText
+            android:id="@+id/edLoginEmail"
+            style="@style/Widget.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:breakStrategy="simple"
+            android:defaultFocusHighlightEnabled="false"
+            android:ems="10"
+            android:fontFamily="@font/sf_pro_regular"
+            android:gravity="center_vertical"
+            android:hint="example@mail.ru"
+            android:hyphenationFrequency="normal"
+            android:inputType="text"
+            android:textAlignment="gravity"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="normal" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnLogin"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#C9D4FB"
+        android:enabled="false"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:text="Далее"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/btnLoginYandex"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/sf_pro_medium"
+        android:text="Войти с Яндекс"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#EBEBEB" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/sf_pro_regular"
+        android:text="Или войдите с помощью"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLoginYandex"
+        app:layout_constraintEnd_toEndOf="@+id/btnLoginYandex"
+        app:layout_constraintStart_toStartOf="@+id/btnLoginYandex" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
